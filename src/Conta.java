@@ -14,6 +14,9 @@ public class Conta {
         return true;
     }
     public boolean saque(double valor){
+        if(valor <= 0){
+            return false;
+        }
         this.saldo -= valor;
         return true;
     }

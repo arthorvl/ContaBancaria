@@ -20,6 +20,9 @@ class ContaTest {
 
     @org.junit.jupiter.api.Test
     void saque() {
+        conta.deposito(100);
+        assertTrue(conta.saque(50));
+        assertFalse(conta.saque(-20));
     }
 
     @org.junit.jupiter.api.Test
