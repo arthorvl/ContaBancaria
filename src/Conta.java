@@ -2,15 +2,20 @@ public class Conta {
 
     private double saldo;
 
-    public Conta(double saldo) {
+    public Conta() {
         this.saldo = 0;
     }
 
-    public void deposito(double valor){
+    public boolean deposito(double valor){
+        if(valor <= 0){
+            return false;
+        }
         this.saldo += valor;
+        return true;
     }
-    public void saque(double valor){
+    public boolean saque(double valor){
         this.saldo -= valor;
+        return true;
     }
 
     public double saldo(){
