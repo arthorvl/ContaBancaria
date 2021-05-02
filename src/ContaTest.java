@@ -22,6 +22,7 @@ class ContaTest {
     void saque() {
         conta.deposito(100);
         assertTrue(conta.saque(50));
+        assertFalse(conta.saque(60));
         assertFalse(conta.saque(-20));
     }
 

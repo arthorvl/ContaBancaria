@@ -17,6 +17,9 @@ public class Conta {
         if(valor <= 0){
             return false;
         }
+        if(valor >= this.saldo){
+            return false;
+        }
         this.saldo -= valor;
         return true;
     }
