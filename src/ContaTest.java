@@ -28,6 +28,9 @@ class ContaTest {
 
     @org.junit.jupiter.api.Test
     void saldo() {
-
+        conta.deposito(100);
+        assertEquals(100, conta.saldo());
+        conta.saque(50);
+        assertEquals(50, conta.saldo());
     }
 }
